@@ -47,8 +47,8 @@ public class SentenceLengthSorter implements ComponentSorter {
 
         Component composite = new Composite();
         String text = component.getValue();
-        for(String sent : text.split(InfoRegex.SENTENCE_TERMINATOR)){
-            Component lexemeSentence = Lexeme.sentence(sent);
+        for(String sentence : text.split(InfoRegex.SENTENCE_TERMINATOR)){
+            Component lexemeSentence = Lexeme.sentence(sentence);
             composite.add(lexemeSentence);
         }
         return composite;
